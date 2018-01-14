@@ -1,0 +1,68 @@
+@import "ibm-colors";
+@import "variables";
+
+/* GLOBAL STYLES */
+
+html, body {
+  font-family: $default-font;
+  margin: 0;
+  padding: 0;
+}
+
+a, a:visited {
+  color: $link-color;
+}
+
+.container {
+  margin: 0 $default-margin;
+  max-width: none;
+  overflow: auto;
+  @media screen and (min-width: ($container-max-width + $default-margin * 2)) {
+    margin: auto;
+    max-width: $container-max-width;
+  }
+}
+
+.attention-background {
+  background: $primary-color;
+  color: white;
+}
+
+.footer-background {
+  background: $footer-color;
+  box-shadow: 0px 500px 0px 500px $footer-color;
+  color: white;
+  a, a:visited {
+    color: color-tint($link-color, 20);
+  }
+}
+
+.brand {
+  font-size: 1.5em;
+  font-weight: 900;
+  margin: 8px 0;
+}
+
+.column {
+  @media screen and (min-width: 768px) {
+    flex: 1 1 0;
+    margin-right: 1em;
+  }
+}
+
+.row {
+  @media screen and (min-width: 768px) {
+    align-items: stretch;
+    display: flex;
+    justify-content: space-between;
+    :last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.right-when-column {
+  @media screen and (min-width: 768px) {
+    text-align: right;
+  }
+}

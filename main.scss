@@ -1,0 +1,78 @@
+
+@import "ibm-colors";
+@import "variables";
+
+/* GLOBAL STYLES */
+
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  color: color('blue', 50);
+}
+
+a, a:visited {
+  color: #2d74da;
+}
+
+.container {
+  margin: auto;
+  max-width: 1200px;
+  overflow: auto;
+}
+
+@media screen and (max-width: 1240px) {
+  .container {
+    margin: 0 20px;
+    max-width: none;
+  }
+}
+
+.attention-bg {
+  background: #2d74da;
+  color: white;
+}
+
+.footer-bg {
+  background: #343334;
+  box-shadow: 0px 500px 0px 500px #343334;
+  color: white;
+}
+
+.footer-bg a, .footer-bg a:link, .footer-bg a:visited, .footer-bg a:hover, .footer-bg a:active {
+  color: #79a6f6;
+}
+
+.column-container {
+  align-items: stretch;
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 1 1 0;
+  margin-right: 1em;
+}
+
+.column-last {
+  flex: 1 1 0;
+}
+
+.right-when-column {
+  text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  .column-container {
+    display: block;
+  }
+
+  .column {
+    margin: 0;
+  }
+
+  .right-when-column {
+    text-align: left;
+  }
+}

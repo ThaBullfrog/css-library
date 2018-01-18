@@ -9,8 +9,12 @@ html, body {
   padding: 0;
 }
 
-a, a:visited {
+a {
   color: $link-color;
+}
+
+a:visited {
+  color: inherited;
 }
 
 p, h1, h2, h3, h4, h5, h6, ol, ul {
@@ -38,7 +42,7 @@ p, h1, h2, h3, h4, h5, h6, ol, ul {
   background: $footer-color;
   box-shadow: 0px 500px 0px 500px $footer-color;
   color: white;
-  a, a:visited {
+  a {
     color: color-tint($link-color, 20);
   }
 }

@@ -19,9 +19,9 @@ p, h1, h2, h3, h4, h5, h6, ol, ul {
 
 .container {
   margin: 0 $default-margin;
-  padding-bottom: 1em;
   max-width: none;
   overflow: auto;
+  padding-bottom: 1em;
   @media screen and (min-width: ($container-max-width + $default-margin * 2)) {
     margin: auto;
     max-width: $container-max-width;

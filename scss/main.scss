@@ -1,7 +1,7 @@
 @import "ibm-colors";
 @import "variables";
 
-/* GLOBAL */
+/* Global */
 
 html, body {
   font-family: $default-font;
@@ -47,7 +47,7 @@ p, h1, h2, h3, h4, h5, h6, ol, ul {
   }
 }
 
-/* NAVBAR */
+/* Navbar */
 
 .brand {
   font-size: 1.5em;
@@ -55,7 +55,7 @@ p, h1, h2, h3, h4, h5, h6, ol, ul {
   margin: 8px 0;
 }
 
-/* GRID */
+/* Grid */
 
 .column {
   @media screen and (min-width: $phone-max-width) {

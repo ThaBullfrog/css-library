@@ -33,6 +33,10 @@ p, h1, h2, h3, h4, h5, h6, ol, ul {
   }
 }
 
+.unpadded {
+  padding: 0;
+}
+
 .attention-background {
   background: $primary-color;
   color: white;
@@ -64,10 +68,26 @@ p, h1, h2, h3, h4, h5, h6, ol, ul {
   }
 }
 
+.text-column {
+  max-width: $text-max-width;
+  @media screen and (min-width: $min-viewport-width-for-sidebar) {
+    flex: 0 2 $text-max-width;
+    margin-right: 16px;
+  }
+}
+
+.sidebar-column {
+  max-width: $text-max-width;
+  @media screen and (min-width: $min-viewport-width-for-sidebar) {
+    flex: 1 1 296px;
+  }
+}
+
 .row {
   @media screen and (min-width: $phone-max-width) {
     align-items: stretch;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     :last-child {
       margin-right: 0;

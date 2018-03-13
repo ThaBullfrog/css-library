@@ -1,5 +1,6 @@
 @import "ibm-colors";
 @import "animated-menu-icon";
+@import "on-scroll-animations";
 @import "variables";
 
 /* Global */
@@ -21,16 +22,16 @@ a:visited {
 }
 
 p, h1, h2, h3, h4, h5, h6, ol, ul {
-  margin: 1em 0 0 0;
+  margin: $default-margin 0 0 0;
 }
 
 .container {
-  margin: 0 $default-margin;
+  box-sizing: border-box;
+  margin: -1px ($default-margin - 1px) 0 ($default-margin - 1px);
   max-width: none;
-  overflow: auto;
-  padding-bottom: 1em;
-  @media screen and (min-width: ($container-max-width + $default-margin * 2)) {
-    margin: auto;
+  padding: 1px 1px 1em 1px;
+  @media screen and (min-width: ($container-max-width + ($default-margin + 7px) * 2)) {
+    margin: -1px auto 0 auto;
     max-width: $container-max-width;
   }
 }
@@ -133,7 +134,7 @@ p, h1, h2, h3, h4, h5, h6, ol, ul {
 
 .row {
   @media screen and (min-width: $phone-max-width) {
-    align-items: stretch;
+    align-items: flex-start;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -141,6 +142,10 @@ p, h1, h2, h3, h4, h5, h6, ol, ul {
       margin-right: 0;
     }
   }
+}
+
+.stretch {
+  align-items: stretch;
 }
 
 .right-when-column {

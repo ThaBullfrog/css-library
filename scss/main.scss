@@ -1,9 +1,11 @@
 @import "ibm-colors";
+@import "animated-menu-icon";
 @import "variables";
 
 /* Global */
 
 html, body {
+  color: $text-color;
   font-family: $default-font;
   line-height: 1.48;
   margin: 0;
@@ -54,9 +56,55 @@ p, h1, h2, h3, h4, h5, h6, ol, ul {
 /* Navbar */
 
 .brand {
+  color: white;
+  display: inline-block;
   font-size: 1.5em;
   font-weight: 900;
-  margin: 8px 0;
+  line-height: $navbar-height;
+  text-decoration: none;
+}
+
+.navbar-menu-button {
+  float: right;
+  margin-left: 1em;
+  margin-top: (($navbar-height / 2) - 12px);
+  @media screen and (min-width: $phone-max-width) {
+    display: none;
+  }
+}
+
+.navbar {
+  @media screen and (min-width: $phone-max-width) {
+    height: 50px;
+  }
+  ul {
+    height: 0;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: height 0.5s;
+    @media screen and (min-width: $phone-max-width) {
+      float: right;
+      height: $navbar-height !important;
+      transition: none;
+    }
+    li {
+      line-height: $navbar-height;
+      font-weight: 900;
+      margin-left: 1em;
+      @media screen and (min-width: $phone-max-width) {
+        display: inline-block;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+        &:hover, &:active {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }
 
 /* Grid */

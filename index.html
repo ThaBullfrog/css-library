@@ -9,8 +9,16 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body>
-    <div class="attention-background"><div class="container unpadded">
-      <div class="brand">Company Name</div>
+    <div class="attention-background"><div class="navbar container unpadded">
+      <a class="brand" href="index.html">Company Name</a>
+      <a id="navbar-button" href="#" class="navbar-menu-button turn-to-x" data-collapsed="true">
+        <span></span>
+      </a>
+      <ul id="navbar-collapse">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
     </div></div>
     <div class="container">
       <div class="row">
@@ -55,5 +63,8 @@
         </div>
       </div>
     </div></div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

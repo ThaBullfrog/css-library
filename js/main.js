@@ -1,21 +1,21 @@
 $(document).ready(function() {
-  var navBarbutton = document.querySelector('#navbar-button');
+  var navbarButton = document.querySelector('#navbar-button');
 
-  if(navBarbutton != null) {
+  if(navbarButton != null) {
     function collapseSection(element) {
       element.style.height = null;
-      navBarbutton.setAttribute('data-collapsed', 'true');
+      navbarButton.setAttribute('data-collapsed', 'true');
     }
 
     function expandSection(element) {
       var sectionHeight = element.scrollHeight;
       element.style.height = sectionHeight + 'px';
-      navBarbutton.setAttribute('data-collapsed', 'false');
+      navbarButton.setAttribute('data-collapsed', 'false');
     }
 
-    navBarbutton.addEventListener('click', function(e) {
+    navbarButton.addEventListener('click', function(e) {
       var section = document.querySelector('#navbar-collapse');
-      var isCollapsed = navBarbutton.getAttribute('data-collapsed') === 'true';
+      var isCollapsed = navbarButton.getAttribute('data-collapsed') === 'true';
       $('#navbar-button').toggleClass('close');
       if(isCollapsed) {
         expandSection(section);
